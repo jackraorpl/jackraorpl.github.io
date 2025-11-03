@@ -12,6 +12,13 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* Add a style for the abstract block */
+        .abstract-block {
+            padding-left: 1.5rem;
+            border-left: 4px solid #e5e7eb; /* light gray border */
+            font-style: italic;
+            color: #4b5563; /* gray-600 */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -49,10 +56,10 @@
                     My research agenda is focused on a central challenge in modern empirical economics: ensuring the credibility of economic inference in complex, high-dimensional settings. As our models and data grow in complexity, how do we guarantee our conclusions are robust, credible, and economically meaningful?
                 </p>
                 <p>
-                    I pursue this question from two complementary angles. From an "outside-in" perspective, I apply cutting-edge, data-first causal inference methods to real-world financial data, demonstrating how crucial methodological choices are for valid economic conclusions. Concurrently, from an "inside-out," theory-first perspective, I develop the theoretical foundations for the next generation of structural models, proving how a model's architecture can provide the implicit regularization needed for stable and plausible solutions.
+                    I pursue this question from two complementary angles. From an "outside-in" perspective, I apply cutting-edge causal machine learning to test the structural predictions of economic theory, such as the (non-linear) liquidity spiral mechanisms responsible for (linear) market trough boundaries. Concurrently, from an "inside-out," theory-first perspective, I develop and apply novel computational methods (like Deep BSDE and Dynamic Programming) to solve high-dimensional structural models (e.g., Bayesian HJB, HANK) that were previously intractable, connecting a model's architecture to its economic plausibility.
                 </p>
                 <p>
-                    This dual approach positions my work at the intersection of empirical asset pricing, structural modeling, and machine learning, with the goal of building more rigorous and reliable tools for economic analysis.
+                    This dual approach positions my work at the intersection of <strong>computational economics</strong>, <strong>empirical asset pricing</strong>, and <strong>machine learning</strong>, with the goal of building more rigorous and reliable tools for economic analysis.
                 </p>
             </div>
         </section>
@@ -68,14 +75,14 @@
                         <strong>Peilin (Jack) Rao</strong>, Randall Rojas
                     </p>
                     <p class="text-sm text-gray-500 mt-1">
-                        <em>Proceedings of the NeurIPS 2025 CauScien Workshop, San Diego, USA.</em>
+                        <em>Extended Version of NeurIPS 2025 CauScien Workshop paper.</em>
                     </p>
-                    <p class="mt-3 text-gray-700">
-                        This paper develops a framework for "nowcasting" rare market troughs using high-performance classifiers and interprets the model's predictions through a causal lens. We employ Double/Debiased Machine Learning (DML) to estimate causal parameters in a high-dimensional setting and conduct formal sensitivity analysis for unobserved confounding, connecting reduced-form findings to structural theories like Intermediary Asset Pricing and Liquidity Spirals.
+                    <p class="mt-3 text-gray-700 abstract-block">
+                        Why do linear models perform well at predicting V-shaped market troughs (ROC AUC = 0.9435), but the underlying theory (liquidity spirals) is inherently non-linear? We show that this is a false dichotomy and demonstrate that the canonical Brunnermeier & Pedersen (2009) model implies both a partially linear bifurcation boundary and non-linear structural interactions (spirals) that drive the market state. We provide empirical evidence for each structure: a linear SVM (the correct tool for the boundary) outperforms non-linear classifiers, while a non-linear DML-APE (the correct tool for the spirals) succeeds in identifying the key drivers of market fragility, whereas a restrictive linear causal model produces spurious results and consistently misidentifies the direction of critical risk drivers. Our research provides strong validation of the Brunnermeier (2009) mechanism by demonstrating that its linear and non-linear elements are both observable in the data.
                     </p>
                     <div class="mt-4 flex flex-wrap gap-2">
                         <a href="http://arxiv.org/abs/2509.05922" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">arXiv</a>
-                        <a href="https://openreview.net/forum?id=rcmKO31Js6" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">OpenReview</a>
+                        <a href="https://openreview.net/forum?id=rcmKO31Js6" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-lg hover:bg-gray-700 transition duration-300">NeurIPS Workshop Version</a>
                     </div>
                 </div>
 
@@ -99,6 +106,26 @@
         </section>
 
         <section class="mt-12">
+            <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-3 mb-6">Research in Progress</h2>
+            <div class="mt-4 space-y-8">
+
+                <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-800">Optimal Monetary Policy under Structural Uncertainty: A Bayesian HJB Approach</h3>
+                    <p class="text-md text-gray-600 mt-1">
+                        <strong>Peilin (Jack) Rao</strong>
+                    </p>
+                    <p class="mt-3 text-gray-700 abstract-block">
+                        Deep structural uncertainty, exemplified by the unstable Phillips Curve, undermines single-model monetary policy. Existing paradigms are either brittle to misspecification (Certainty-Equivalence) or overly pessimistic and static (Worst-Case Robustness). This research proposes a Bayesian Hamilton-Jacobi-Bellman (HJB) framework that optimizes policy over a belief-weighted 'cloud' of models, which formalizes the dual control problem to balance stabilization with active learning. I solve this historically intractable problem using the Deep Backward Stochastic Differential Equation (Deep BSDE) method, overcoming the curse of dimensionality. The result is a tractable, adaptive policy demonstrably more robust to structural breaks than existing static approaches.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="papers/bayesian_hjb_proposal.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Read Proposal</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mt-12">
             <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-3 mb-6">Future Research Interests</h2>
             <div class="mt-4 text-lg text-gray-700 leading-relaxed space-y-6">
                 <div>
@@ -108,9 +135,9 @@
                     </p>
                 </div>
                  <div>
-                    <h3 class="text-lg font-semibold text-gray-800">Econometric Foundations of AI-Powered Structural Models</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">Solving High-Dimensional Structural Models</h3>
                     <p>
-                        I aim to expand my foundational work on implicit regularization to build a comprehensive theoretical toolkit for validating next-generation structural models. This involves tackling the classic identification problem in the context of neural networks and generalizing the analysis of architectural bias to other advanced architectures, such as Transformers or Deep Sets.
+                        My foundational work on GNNs and implicit regularization (NeurIPS 2025) and my proposal on Bayesian HJB models (using Deep BSDE) form the basis for my core agenda: solving the next generation of large-scale structural models. I am focused on applying deep learning and dynamic programming methods to solve previously intractable problems in computational economics, particularly Heterogeneous Agent New Keynesian (HANK) models and Mean-Field Games (MFGs).
                     </p>
                 </div>
             </div>
