@@ -41,7 +41,7 @@
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
                     </a>
 
-                    <a href="CV/Peilin_Rao_Resume_Dec_10.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition duration-300" title="CV">
+                    <a href="CV/Peilin_Rao_CV_March_1.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition duration-300" title="CV">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M8,12H16V14H8V12M8,16H16V18H8V16Z"></path></svg>
                     </a>
 
@@ -53,13 +53,13 @@
             <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-gray-200 pb-3 mb-6">Research Statement</h2>
             <div class="mt-4 text-lg text-gray-700 leading-relaxed space-y-4">
                 <p>
-                    My research agenda is focused on a central challenge in modern empirical economics: ensuring the credibility of economic inference in complex, high-dimensional settings. As our models and data grow in complexity, how do we guarantee our conclusions are robust, credible, and economically meaningful?
+                    Hi there, I am generally interested in macrofinance, particularly in the area of money market, foreign exchange, and monetary policy. I am currently trying out research on active experimentation approach for the central bank, and is reading books related to monery market and international macrofinance/trade to explore what I want to do for my PhD dissertation.
                 </p>
                 <p>
-                    I pursue this question from two complementary angles. From an "outside-in" perspective, I apply cutting-edge causal machine learning to test the structural predictions of economic theory, such as the (non-linear) liquidity spiral mechanisms responsible for (linear) market trough boundaries. Concurrently, from an "inside-out," theory-first perspective, I develop and apply novel computational methods (like Deep BSDE and Dynamic Programming) to solve high-dimensional structural models (e.g., Bayesian HJB, HANK) that were previously intractable, connecting a model's architecture to its economic plausibility.
+                    From a technical standpoint, I am mostly interested in any dynamic problems, particularly those incorporating risk/hard boundaries and those that capture precautionary motives. It is like RL problem we see in CoT but I want to make them tractable analytically / numerically. I hope to simultaneously understand the money / exchange / bond market and actively trade in it to validate my theories.
                 </p>
                 <p>
-                    This dual approach positions my work at the intersection of <strong>computational economics</strong>, <strong>empirical asset pricing</strong>, and <strong>machine learning</strong>, with the goal of building more rigorous and reliable tools for economic analysis.
+                    I will make a more formal research statement during my PhD training :)
                 </p>
             </div>
         </section>
@@ -81,7 +81,7 @@
                         Why do linear models perform well at predicting V-shaped market troughs (ROC AUC = 0.9435), but the underlying theory (liquidity spirals) is inherently non-linear? We show that this is a false dichotomy and demonstrate that the canonical Brunnermeier & Pedersen (2009) model implies both a partially linear bifurcation boundary and non-linear structural interactions (spirals) that drive the market state. We provide empirical evidence for each structure: a linear SVM (the correct tool for the boundary) outperforms non-linear classifiers, while a non-linear DML-APE (the correct tool for the spirals) succeeds in identifying the key drivers of market fragility, whereas a restrictive linear causal model produces spurious results and consistently misidentifies the direction of critical risk drivers. Our research provides strong validation of the Brunnermeier (2009) mechanism by demonstrating that its linear and non-linear elements are both observable in the data.
                     </p>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <a href="papers/Peilin_Rao_Market_Troughs_Bifurcation.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Working Paper for JFQA</a>
+                        <a href="papers/Peilin_Rao_Market_Troughs_Bifurcation.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Working Paper</a>
                         <a href="https://openreview.net/forum?id=rcmKO31Js6" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-lg hover:bg-gray-700 transition duration-300">NeurIPS Workshop Version</a>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                         Deep structural uncertainty, exemplified by the unstable Phillips Curve, undermines single-model monetary policy. Existing paradigms are either brittle to misspecification (Certainty-Equivalence) or overly pessimistic and static (Worst-Case Robustness). This research proposes a Bayesian Hamilton-Jacobi-Bellman (HJB) framework that optimizes policy over a belief-weighted 'cloud' of models, which formalizes the dual control problem to balance stabilization with active learning. I solve this historically intractable problem using the Deep Backward Stochastic Differential Equation (Deep BSDE) method, overcoming the curse of dimensionality. The result is a tractable, adaptive policy demonstrably more robust to structural breaks than existing static approaches.
                     </p>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <a href="papers/bayesian_hjb_proposal.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Read Proposal</a>
+                        <a href="papers/Bayesian_HJB_active_learning_manuscript_Mar_31.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Rough Manuscript</a>
                     </div>
                 </div>
 
